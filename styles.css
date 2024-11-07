@@ -1,0 +1,194 @@
+.esol-game {
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #ffffff;
+}
+
+.esol-game * {
+    box-sizing: inherit;
+}
+
+.esol-game-container {
+    background-color: rgba(38, 38, 38, 0.95);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    backdrop-filter: blur(8px);
+    max-width: 800px;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.esol-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.esol-header h2 {
+    color: #6366f1;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.esol-controls {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.esol-select {
+    flex: 1;
+    min-width: 140px;
+    padding: 0.5rem;
+    background-color: rgba(38, 38, 38, 0.8);
+    border: 1px solid #4b5563;
+    border-radius: 4px;
+    color: inherit;
+    font-size: 0.875rem;
+}
+
+.esol-button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #6366f1;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.esol-button:hover {
+    background-color: #4f46e5;
+    transform: translateY(-1px);
+}
+
+.esol-table-container {
+    overflow-x: auto;
+    margin: 1.25rem 0;
+    background-color: rgba(38, 38, 38, 0.8);
+    border-radius: 4px;
+    padding: 0.75rem;
+    -webkit-overflow-scrolling: touch;
+}
+
+.esol-table {
+    min-width: 600px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 4px;
+    table-layout: fixed;
+}
+
+.esol-table th,
+.esol-table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0.75rem;
+    border-radius: 4px;
+    text-align: center;
+    vertical-align: middle;
+    height: 3.5rem;
+}
+
+.esol-table th {
+    background-color: #6366f1;
+    color: white;
+    font-weight: 600;
+}
+
+.esol-table td {
+    background-color: rgba(51, 51, 51, 0.8);
+}
+
+.esol-input,
+.esol-table input[type="text"] {
+    width: 100%;
+    height: 2.5rem;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 2px solid #4b5563;
+    border-radius: 4px;
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.esol-input:focus,
+.esol-table input[type="text"]:focus {
+    outline: none;
+    border-color: #6366f1;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
+}
+
+.esol-result {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 4px;
+    background-color: rgba(51, 51, 51, 0.8);
+}
+
+.esol-score {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(51, 51, 51, 0.8);
+    border-radius: 4px;
+    margin-top: 1.5rem;
+}
+
+.esol-instructions {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    background-color: rgba(51, 51, 51, 0.8);
+    border-radius: 4px;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.esol-instructions h3 {
+    color: #6366f1;
+    margin-top: 0;
+}
+
+.esol-instructions strong {
+    color: #818cf8;
+}
+
+.esol-result.success {
+    color: #22c55e;
+    background-color: rgba(34, 197, 94, 0.2);
+}
+
+.esol-result.error {
+    color: #ef4444;
+    background-color: rgba(239, 68, 68, 0.2);
+}
+
+@media (max-width: 768px) {
+    .esol-controls {
+        flex-direction: column;
+    }
+
+    .esol-select {
+        width: 100%;
+    }
+    
+    .esol-table {
+        margin: 0;
+        min-width: 500px;
+    }
+    
+    .esol-table th,
+    .esol-table td {
+        padding: 0.5rem;
+    }
+}
