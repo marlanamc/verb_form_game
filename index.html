@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verb Form Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Practice English verb forms with this interactive learning game">
+</head>
+<body>
+    <div class="esol-game">
+        <div class="esol-game-container">
+            <div class="esol-header">
+                <h2>ESOL Verb Form Game</h2>
+                <p>Practice your knowledge of English verb forms</p>
+            </div>
+
+            <div class="esol-controls">
+                <select class="esol-select" id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                    <option value="only-v1">Only V1</option>
+                    <option value="only-v1-3rd">Only V1-3rd</option>
+                    <option value="only-v1-ing">Only V1-ing</option>
+                    <option value="only-v2">Only V2</option>
+                    <option value="only-v3">Only V3</option>
+                </select>
+                <select class="esol-select" id="verb-type">
+                    <option value="all">All Verbs</option>
+                    <option value="irregular">Irregular Verbs Only</option>
+                </select>
+            </div>
+
+            <button class="esol-button" id="generate-question">Generate New Question</button>
+
+            <div class="esol-table-container">
+                <table class="esol-table">
+                    <thead>
+                        <tr>
+                            <th>V1</th>
+                            <th>V1-3rd</th>
+                            <th>V1-ing</th>
+                            <th>V2</th>
+                            <th>V3</th>
+                        </tr>
+                    </thead>
+                    <tbody id="verb-display"></tbody>
+                </table>
+            </div>
+
+            <button class="esol-button" id="check-answer">Check Answer</button>
+            <div class="esol-result" id="result"></div>
+            
+            <div class="esol-score">
+                <div id="score">Score: <span id="correct-count">0</span></div>
+                <div id="percentage">Correct Percentage: <span id="correct-percentage">0%</span></div>
+            </div>
+
+            <div class="esol-instructions">
+                <h3>How to Play</h3>
+                <p>1. Select the <strong>Difficulty</strong> level:</p>
+                <ul>
+                    <li><strong>Easy:</strong> Only one blank space</li>
+                    <li><strong>Medium:</strong> Three blanks</li>
+                    <li><strong>Hard:</strong> Four blanks</li>
+                    <li>Or choose to focus on one specific verb form</li>
+                </ul>
+                
+                <h3>Verb Forms Explained</h3>
+                <ul>
+                    <li><strong>V1:</strong> Base form (e.g., "accept")</li>
+                    <li><strong>V1-3rd:</strong> Third person singular (e.g., "accepts")</li>
+                    <li><strong>V1-ing:</strong> Present participle (e.g., "accepting")</li>
+                    <li><strong>V2:</strong> Past simple (e.g., "accepted")</li>
+                    <li><strong>V3:</strong> Past participle (e.g., "accepted")</li>
+                </ul>
+
+                <p><strong>Keyboard Shortcuts:</strong></p>
+                <ul>
+                    <li><strong>Enter:</strong> Check your answer</li>
+                    <li><strong>Right Arrow →:</strong> Get next question</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="verbs.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
